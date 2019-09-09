@@ -1,0 +1,17 @@
+{
+  "name": "learningScripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "usingADeviceConnectionString.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "azure-iot-device": "^1.11.1",
+    "azure-iot-device-mqtt": "^1.10.2",
+    "dotenv": "^8.1.0"
+  }
+}
