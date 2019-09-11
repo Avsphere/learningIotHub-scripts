@@ -1,7 +1,6 @@
 require('dotenv').config()
 const { Mqtt : Transport } = require('azure-iot-device-mqtt');
 const { ModuleClient : Client } = require('azure-iot-device');
-const { Message } = require('azure-iot-device');
 
 
 const run = async() => {
@@ -11,12 +10,12 @@ const run = async() => {
 
     const twin = await client.getTwin()
 
-    twin.on('properties.desired', console.log.bind('properties.desired: ') );
-    twin.on('properties.reported', console.log.bind('properties.reported: ') );
+    twin.on('properties.desired', console.log); 
+    twin.on('properties.reported', console.log);
 
     const update = {
       animal : 'penguin',
-      firmwareAnimalVersion : '1.2.3'
+      firmwareAnimalVersion : Math.random().toString()
     }
 
 
